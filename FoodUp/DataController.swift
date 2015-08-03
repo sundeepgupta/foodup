@@ -1,8 +1,8 @@
 import Foundation
 
 struct DataController {
-    let defaults: NSUserDefaults
-    let key = "meals"
+    private let defaults: NSUserDefaults
+    private let key = "meals"
     
     init(defaults: NSUserDefaults) {
         self.defaults = defaults

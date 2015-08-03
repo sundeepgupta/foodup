@@ -26,7 +26,8 @@ class TrackVC: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nc = segue.destinationViewController as! UINavigationController
         if let historyVC = nc.viewControllers.first as? HistoryVC {
-            historyVC.setDataController(self.dataController)
+            let history = HistoryBuilder(dataController: self.dataController).history()
+            historyVC.setHistory(history)
         }
     }
     

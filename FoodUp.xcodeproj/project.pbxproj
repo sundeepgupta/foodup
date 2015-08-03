@@ -19,6 +19,9 @@
 		2706EB5D1B6FB2B1009348A8 /* DataControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB5C1B6FB2B1009348A8 /* DataControllerTests.swift */; };
 		279289261B6FC8FD0042F299 /* MealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289251B6FC8FD0042F299 /* MealTests.swift */; };
 		279289281B6FF53A0042F299 /* FakeDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289271B6FF53A0042F299 /* FakeDefaults.swift */; };
+		2792892A1B701DA40042F299 /* HistoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289291B701DA40042F299 /* HistoryBuilder.swift */; };
+		2792892C1B7021130042F299 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792892B1B7021130042F299 /* History.swift */; };
+		2792892E1B7023420042F299 /* HistoryBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792892D1B7023420042F299 /* HistoryBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		2706EB5E1B6FB2B1009348A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279289251B6FC8FD0042F299 /* MealTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTests.swift; sourceTree = "<group>"; };
 		279289271B6FF53A0042F299 /* FakeDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDefaults.swift; sourceTree = "<group>"; };
+		279289291B701DA40042F299 /* HistoryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryBuilder.swift; sourceTree = "<group>"; };
+		2792892B1B7021130042F299 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		2792892D1B7023420042F299 /* HistoryBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 				2706EB3C1B6FA8AD009348A8 /* AppDelegate.swift */,
 				2706EB431B6FA8AD009348A8 /* Assets.xcassets */,
 				2706EB541B6FB26E009348A8 /* DataController.swift */,
+				2792892B1B7021130042F299 /* History.swift */,
+				279289291B701DA40042F299 /* HistoryBuilder.swift */,
 				2706EB4E1B6FAE1B009348A8 /* HistoryVC.swift */,
 				2706EB481B6FA8AD009348A8 /* Info.plist */,
 				2706EB451B6FA8AD009348A8 /* LaunchScreen.storyboard */,
@@ -110,6 +118,7 @@
 				2706EB5E1B6FB2B1009348A8 /* Info.plist */,
 				279289251B6FC8FD0042F299 /* MealTests.swift */,
 				279289271B6FF53A0042F299 /* FakeDefaults.swift */,
+				2792892D1B7023420042F299 /* HistoryBuilderTests.swift */,
 			);
 			path = FoodUpTests;
 			sourceTree = "<group>";
@@ -216,6 +225,8 @@
 			files = (
 				2706EB511B6FB173009348A8 /* Meal.swift in Sources */,
 				2706EB551B6FB26E009348A8 /* DataController.swift in Sources */,
+				2792892C1B7021130042F299 /* History.swift in Sources */,
+				2792892A1B701DA40042F299 /* HistoryBuilder.swift in Sources */,
 				2706EB3F1B6FA8AD009348A8 /* TrackVC.swift in Sources */,
 				2706EB4F1B6FAE1B009348A8 /* HistoryVC.swift in Sources */,
 				2706EB3D1B6FA8AD009348A8 /* AppDelegate.swift in Sources */,
@@ -227,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2792892E1B7023420042F299 /* HistoryBuilderTests.swift in Sources */,
 				279289281B6FF53A0042F299 /* FakeDefaults.swift in Sources */,
 				279289261B6FC8FD0042F299 /* MealTests.swift in Sources */,
 				2706EB5D1B6FB2B1009348A8 /* DataControllerTests.swift in Sources */,

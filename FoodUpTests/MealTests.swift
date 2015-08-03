@@ -3,7 +3,7 @@ import XCTest
 
 class MealTests: XCTestCase {
 
-    var subject = Meal(type: .Small, time: NSDate())
+    var subject: Meal!
     override func setUp() {
         super.setUp()
         subject = Meal(type: .Small, time: NSDate())

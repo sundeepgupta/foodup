@@ -1,11 +1,13 @@
 import UIKit
 
 class HistoryVC: UIViewController {
-    @IBOutlet weak var textView: UITextView!
-    private var dataController: DataController!
+    @IBOutlet weak var smallLabel: UILabel!
+    @IBOutlet weak var mediumLabel: UILabel!
+    @IBOutlet weak var largeLabel: UILabel!
+    private var history: History!
     
-    func setDataController(dataController: DataController) {
-        self.dataController = dataController;
+    func setHistory(history: History) {
+        self.history = history
     }
     
     override func viewDidLoad() {
@@ -19,12 +21,11 @@ class HistoryVC: UIViewController {
     }
     
     private func loadData() {
-        let meals = self.dataController.meals()
-        let reducer: (String, Meal) -> String = { memo, meal in
-            return memo + meal.stringRepresentation() + "\n"
-        }
-        let description = meals.reduce("", combine: reducer)
+        self.smallLabel.text = "\(self.history.smallCount)"
+        
+        
 
-        self.textView.text = description
     }
+    
+    
 }

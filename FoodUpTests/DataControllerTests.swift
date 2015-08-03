@@ -3,7 +3,7 @@ import XCTest
 
 class DataControllerTests: XCTestCase {
     
-    var subject = DataController(defaults: FakeDefaults())
+    var subject: DataController!
     override func setUp() {
         super.setUp()
         subject = DataController(defaults: FakeDefaults())
@@ -36,7 +36,4 @@ class DataControllerTests: XCTestCase {
         
         XCTAssertEqual(result, expected)
     }
-    
-    
-    
 }
