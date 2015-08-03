@@ -33,5 +33,9 @@ class Meal: NSObject, NSCoding {
         
         return self.type == rhs.type && self.time == rhs.time
     }
+
+    func stringRepresentation() -> String {
+        return "Type: \(self.type.rawValue) Time: \(self.time)"
+    }
     
 }

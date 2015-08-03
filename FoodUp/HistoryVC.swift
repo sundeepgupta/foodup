@@ -11,12 +11,21 @@ class HistoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let meals = self.dataController.meals()
-        self.textView.text = meals.description
+        self.loadData()
     }
     
     @IBAction func done() {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    private func loadData() {
+        let meals = self.dataController.meals()
+        let reducer: (String, Meal) -> String = { memo, meal in
+            return memo + meal.stringRepresentation() + "\n"
+        }
+        let description = meals.reduce("", combine: reducer)
+
+        self.textView.text = description
     }
     
     
