@@ -13,6 +13,7 @@ struct HistoryBuilder {
         let smallCount = self.countFor(type: .Small)
         let mediumCount = self.countFor(type: .Medium)
         let largeCount = self.countFor(type: .Large)
+        
         return History(smallCount: smallCount, mediumCount: mediumCount, largeCount: largeCount)
     }
     
@@ -21,5 +22,4 @@ struct HistoryBuilder {
             return type == meal.type ? memo + 1 : memo
         }
     }
-    
 }

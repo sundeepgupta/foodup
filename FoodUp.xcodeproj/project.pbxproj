@@ -96,16 +96,12 @@
 			isa = PBXGroup;
 			children = (
 				2706EB3C1B6FA8AD009348A8 /* AppDelegate.swift */,
-				2706EB431B6FA8AD009348A8 /* Assets.xcassets */,
 				2706EB541B6FB26E009348A8 /* DataController.swift */,
-				2792892B1B7021130042F299 /* History.swift */,
-				279289291B701DA40042F299 /* HistoryBuilder.swift */,
-				2706EB4E1B6FAE1B009348A8 /* HistoryVC.swift */,
-				2706EB481B6FA8AD009348A8 /* Info.plist */,
+				2792892F1B70272E0042F299 /* History */,
 				2706EB451B6FA8AD009348A8 /* LaunchScreen.storyboard */,
 				2706EB401B6FA8AD009348A8 /* Main.storyboard */,
-				2706EB501B6FB173009348A8 /* Meal.swift */,
-				2706EB521B6FB1B5009348A8 /* MealType.swift */,
+				279289301B70273A0042F299 /* Meal */,
+				279289311B7027700042F299 /* Resources */,
 				2706EB3E1B6FA8AD009348A8 /* TrackVC.swift */,
 			);
 			path = FoodUp;
@@ -121,6 +117,34 @@
 				2792892D1B7023420042F299 /* HistoryBuilderTests.swift */,
 			);
 			path = FoodUpTests;
+			sourceTree = "<group>";
+		};
+		2792892F1B70272E0042F299 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				2792892B1B7021130042F299 /* History.swift */,
+				279289291B701DA40042F299 /* HistoryBuilder.swift */,
+				2706EB4E1B6FAE1B009348A8 /* HistoryVC.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		279289301B70273A0042F299 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				2706EB501B6FB173009348A8 /* Meal.swift */,
+				2706EB521B6FB1B5009348A8 /* MealType.swift */,
+			);
+			name = Meal;
+			sourceTree = "<group>";
+		};
+		279289311B7027700042F299 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2706EB431B6FA8AD009348A8 /* Assets.xcassets */,
+				2706EB481B6FA8AD009348A8 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
