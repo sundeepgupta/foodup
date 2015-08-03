@@ -3,15 +3,10 @@ import XCTest
 
 class DataControllerTests: XCTestCase {
     
-    var subject = DataController(defaults: NSUserDefaults())
+    var subject = DataController(defaults: FakeDefaults())
     override func setUp() {
         super.setUp()
-        
-        let defaults = NSUserDefaults()
-        let domain = NSBundle.mainBundle().bundleIdentifier
-        defaults.removePersistentDomainForName(domain!)
-
-        subject = DataController(defaults: defaults)
+        subject = DataController(defaults: FakeDefaults())
     }
     
     func testCreateMeal() {

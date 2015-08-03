@@ -27,6 +27,4 @@ class HistoryVC: UIViewController {
 
         self.textView.text = description
     }
-    
-    
 }

@@ -18,6 +18,7 @@
 		2706EB551B6FB26E009348A8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB541B6FB26E009348A8 /* DataController.swift */; };
 		2706EB5D1B6FB2B1009348A8 /* DataControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB5C1B6FB2B1009348A8 /* DataControllerTests.swift */; };
 		279289261B6FC8FD0042F299 /* MealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289251B6FC8FD0042F299 /* MealTests.swift */; };
+		279289281B6FF53A0042F299 /* FakeDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289271B6FF53A0042F299 /* FakeDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		2706EB5C1B6FB2B1009348A8 /* DataControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllerTests.swift; sourceTree = "<group>"; };
 		2706EB5E1B6FB2B1009348A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279289251B6FC8FD0042F299 /* MealTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTests.swift; sourceTree = "<group>"; };
+		279289271B6FF53A0042F299 /* FakeDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,15 +90,15 @@
 			isa = PBXGroup;
 			children = (
 				2706EB3C1B6FA8AD009348A8 /* AppDelegate.swift */,
-				2706EB3E1B6FA8AD009348A8 /* TrackVC.swift */,
-				2706EB401B6FA8AD009348A8 /* Main.storyboard */,
-				2706EB4E1B6FAE1B009348A8 /* HistoryVC.swift */,
 				2706EB431B6FA8AD009348A8 /* Assets.xcassets */,
-				2706EB451B6FA8AD009348A8 /* LaunchScreen.storyboard */,
+				2706EB541B6FB26E009348A8 /* DataController.swift */,
+				2706EB4E1B6FAE1B009348A8 /* HistoryVC.swift */,
 				2706EB481B6FA8AD009348A8 /* Info.plist */,
+				2706EB451B6FA8AD009348A8 /* LaunchScreen.storyboard */,
+				2706EB401B6FA8AD009348A8 /* Main.storyboard */,
 				2706EB501B6FB173009348A8 /* Meal.swift */,
 				2706EB521B6FB1B5009348A8 /* MealType.swift */,
-				2706EB541B6FB26E009348A8 /* DataController.swift */,
+				2706EB3E1B6FA8AD009348A8 /* TrackVC.swift */,
 			);
 			path = FoodUp;
 			sourceTree = "<group>";
@@ -107,6 +109,7 @@
 				2706EB5C1B6FB2B1009348A8 /* DataControllerTests.swift */,
 				2706EB5E1B6FB2B1009348A8 /* Info.plist */,
 				279289251B6FC8FD0042F299 /* MealTests.swift */,
+				279289271B6FF53A0042F299 /* FakeDefaults.swift */,
 			);
 			path = FoodUpTests;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279289281B6FF53A0042F299 /* FakeDefaults.swift in Sources */,
 				279289261B6FC8FD0042F299 /* MealTests.swift in Sources */,
 				2706EB5D1B6FB2B1009348A8 /* DataControllerTests.swift in Sources */,
 			);

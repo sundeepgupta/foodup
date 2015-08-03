@@ -11,7 +11,7 @@ class MealTests: XCTestCase {
     
     func testEncoding() {
         let key = "meal"
-        let defaults = NSUserDefaults()
+        let defaults = FakeDefaults()
         let before = NSKeyedArchiver.archivedDataWithRootObject(subject)
         defaults.setObject(before, forKey: key)
         defaults.synchronize()

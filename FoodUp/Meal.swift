@@ -37,5 +37,4 @@ class Meal: NSObject, NSCoding {
     func stringRepresentation() -> String {
         return "Type: \(self.type.rawValue) Time: \(self.time)"
     }
-    
 }
