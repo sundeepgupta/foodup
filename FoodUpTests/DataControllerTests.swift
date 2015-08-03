@@ -6,7 +6,12 @@ class DataControllerTests: XCTestCase {
     var subject = DataController(defaults: NSUserDefaults())
     override func setUp() {
         super.setUp()
-        subject = DataController(defaults: NSUserDefaults())
+        
+        let defaults = NSUserDefaults()
+        let domain = NSBundle.mainBundle().bundleIdentifier
+        defaults.removePersistentDomainForName(domain!)
+
+        subject = DataController(defaults: defaults)
     }
     
     func testCreateMeal() {
@@ -20,7 +25,21 @@ class DataControllerTests: XCTestCase {
     }
     
     func testFetchingMeals() {
+        let type0 = MealType.Small
+        let time0 = NSDate()
+        let meal0 = Meal(type: type0, time: time0)
         
+        let type1 = MealType.Medium
+        let time1 = NSDate()
+        let meal1 = Meal(type: type1, time: time1)
+        
+        let expected = [meal0, meal1]
+        
+        subject.createMeal(type: type0, time: time0)
+        subject.createMeal(type: type1, time: time1)
+        let result = subject.meals()
+        
+        XCTAssertEqual(result, expected)
     }
     
     
