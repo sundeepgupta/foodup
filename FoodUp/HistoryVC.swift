@@ -22,10 +22,7 @@ class HistoryVC: UIViewController {
     
     private func loadData() {
         self.smallLabel.text = "\(self.history.smallCount)"
-        
-        
-
+        self.mediumLabel.text = "\(self.history.mediumCount)"
+        self.largeLabel.text = "\(self.history.largeCount)"
     }
-    
-    
 }
