@@ -1,22 +1,35 @@
 import UIKit
+import WatchConnectivity
 
-class TrackVC: UIViewController {
+
+class TrackVC: UIViewController, WCSessionDelegate {
     private var dataController: DataController!
+    private let session = WCSession.defaultSession()
     
     func setDataController(dataController: DataController) {
         self.dataController = dataController;
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.session.delegate = self
+        self.session.activateSession()
+    }
+    
     @IBAction func ateSmallMeal() {
-        self.processMeal(type: .Small)
+        self.createMeal(type: .Small)
+        self.presentHistory()
     }
     
     @IBAction func ateMediumMeal() {
-        self.processMeal(type: .Medium)
+        self.createMeal(type: .Medium)
+        self.presentHistory()
     }
     
     @IBAction func ateLargeMeal() {
-        self.processMeal(type: .Large)
+        self.createMeal(type: .Large)
+        self.presentHistory()
     }
 
     @IBAction func seeHistory() {
@@ -31,10 +44,19 @@ class TrackVC: UIViewController {
         }
     }
     
-    private func processMeal(type type: MealType) {
+
+    // MARK: - WCSessionDelegate
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        let typeRawValue = applicationContext["type"] as! String
+        if let type = MealType(rawValue: typeRawValue) {
+            self.createMeal(type: type)
+        }
+    }
+    
+    
+    // MARK: - Private
+    private func createMeal(type type: MealType) {
         self.dataController.createMeal(type: type, time: NSDate())
-        self.presentHistory()
-        
     }
     
     private func presentHistory() {

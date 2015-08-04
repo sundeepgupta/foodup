@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8083.2"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FoodUpWatch" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Tied me over" id="krJ-pK-Z7p">
+                            <connections>
+                                <action selector="ateSmallMeal" destination="AgC-eL-Hgc" id="2GT-NG-y7e"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Hit the spot" id="BwM-Il-Ite">
+                            <connections>
+                                <action selector="ateMediumMeal" destination="AgC-eL-Hgc" id="iOM-0m-hU8"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Comatosed" id="y6K-zS-JYz">
+                            <connections>
+                                <action selector="ateLargeMeal" destination="AgC-eL-Hgc" id="YGd-nS-OU0"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>

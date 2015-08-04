@@ -22,6 +22,13 @@
 		2792892A1B701DA40042F299 /* HistoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289291B701DA40042F299 /* HistoryBuilder.swift */; };
 		2792892C1B7021130042F299 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792892B1B7021130042F299 /* History.swift */; };
 		2792892E1B7023420042F299 /* HistoryBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792892D1B7023420042F299 /* HistoryBuilderTests.swift */; };
+		279289381B703B600042F299 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279289361B703B600042F299 /* Interface.storyboard */; };
+		2792893A1B703B600042F299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279289391B703B600042F299 /* Assets.xcassets */; };
+		279289411B703B600042F299 /* FoodUpWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 279289401B703B600042F299 /* FoodUpWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		279289461B703B600042F299 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289451B703B600042F299 /* InterfaceController.swift */; };
+		279289481B703B600042F299 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289471B703B600042F299 /* ExtensionDelegate.swift */; };
+		2792894A1B703B600042F299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279289491B703B600042F299 /* Assets.xcassets */; };
+		2792894E1B703B600042F299 /* FoodUpWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 279289341B703B600042F299 /* FoodUpWatch.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +39,46 @@
 			remoteGlobalIDString = 2706EB381B6FA8AD009348A8;
 			remoteInfo = FoodUp;
 		};
+		279289421B703B600042F299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2706EB311B6FA8AD009348A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2792893F1B703B600042F299;
+			remoteInfo = "FoodUpWatch Extension";
+		};
+		2792894C1B703B600042F299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2706EB311B6FA8AD009348A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 279289331B703B5F0042F299;
+			remoteInfo = FoodUpWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		279289521B703B600042F299 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				279289411B703B600042F299 /* FoodUpWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279289561B703B600042F299 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2792894E1B703B600042F299 /* FoodUpWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2706EB391B6FA8AD009348A8 /* FoodUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +100,15 @@
 		279289291B701DA40042F299 /* HistoryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryBuilder.swift; sourceTree = "<group>"; };
 		2792892B1B7021130042F299 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		2792892D1B7023420042F299 /* HistoryBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryBuilderTests.swift; sourceTree = "<group>"; };
+		279289341B703B600042F299 /* FoodUpWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodUpWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		279289371B703B600042F299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		279289391B703B600042F299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2792893B1B703B600042F299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		279289401B703B600042F299 /* FoodUpWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FoodUpWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		279289451B703B600042F299 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		279289471B703B600042F299 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		279289491B703B600042F299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2792894B1B703B600042F299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +126,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2792893D1B703B600042F299 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +141,8 @@
 			children = (
 				2706EB3B1B6FA8AD009348A8 /* FoodUp */,
 				2706EB5B1B6FB2B1009348A8 /* FoodUpTests */,
+				279289351B703B600042F299 /* FoodUpWatch */,
+				279289441B703B600042F299 /* FoodUpWatch Extension */,
 				2706EB3A1B6FA8AD009348A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +152,8 @@
 			children = (
 				2706EB391B6FA8AD009348A8 /* FoodUp.app */,
 				2706EB5A1B6FB2B1009348A8 /* FoodUpTests.xctest */,
+				279289341B703B600042F299 /* FoodUpWatch.app */,
+				279289401B703B600042F299 /* FoodUpWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +213,27 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		279289351B703B600042F299 /* FoodUpWatch */ = {
+			isa = PBXGroup;
+			children = (
+				279289361B703B600042F299 /* Interface.storyboard */,
+				279289391B703B600042F299 /* Assets.xcassets */,
+				2792893B1B703B600042F299 /* Info.plist */,
+			);
+			path = FoodUpWatch;
+			sourceTree = "<group>";
+		};
+		279289441B703B600042F299 /* FoodUpWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				279289451B703B600042F299 /* InterfaceController.swift */,
+				279289471B703B600042F299 /* ExtensionDelegate.swift */,
+				279289491B703B600042F299 /* Assets.xcassets */,
+				2792894B1B703B600042F299 /* Info.plist */,
+			);
+			path = "FoodUpWatch Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,10 +244,12 @@
 				2706EB351B6FA8AD009348A8 /* Sources */,
 				2706EB361B6FA8AD009348A8 /* Frameworks */,
 				2706EB371B6FA8AD009348A8 /* Resources */,
+				279289561B703B600042F299 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2792894D1B703B600042F299 /* PBXTargetDependency */,
 			);
 			name = FoodUp;
 			productName = FoodUp;
@@ -185,6 +274,40 @@
 			productReference = 2706EB5A1B6FB2B1009348A8 /* FoodUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		279289331B703B5F0042F299 /* FoodUpWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 279289531B703B600042F299 /* Build configuration list for PBXNativeTarget "FoodUpWatch" */;
+			buildPhases = (
+				279289321B703B5F0042F299 /* Resources */,
+				279289521B703B600042F299 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				279289431B703B600042F299 /* PBXTargetDependency */,
+			);
+			name = FoodUpWatch;
+			productName = FoodUpWatch;
+			productReference = 279289341B703B600042F299 /* FoodUpWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2792893F1B703B600042F299 /* FoodUpWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2792894F1B703B600042F299 /* Build configuration list for PBXNativeTarget "FoodUpWatch Extension" */;
+			buildPhases = (
+				2792893C1B703B600042F299 /* Sources */,
+				2792893D1B703B600042F299 /* Frameworks */,
+				2792893E1B703B600042F299 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FoodUpWatch Extension";
+			productName = "FoodUpWatch Extension";
+			productReference = 279289401B703B600042F299 /* FoodUpWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,6 +323,12 @@
 					2706EB591B6FB2B1009348A8 = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 2706EB381B6FA8AD009348A8;
+					};
+					279289331B703B5F0042F299 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					2792893F1B703B600042F299 = {
+						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
@@ -218,6 +347,8 @@
 			targets = (
 				2706EB381B6FA8AD009348A8 /* FoodUp */,
 				2706EB591B6FB2B1009348A8 /* FoodUpTests */,
+				279289331B703B5F0042F299 /* FoodUpWatch */,
+				2792893F1B703B600042F299 /* FoodUpWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +368,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279289321B703B5F0042F299 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2792893A1B703B600042F299 /* Assets.xcassets in Resources */,
+				279289381B703B600042F299 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2792893E1B703B600042F299 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2792894A1B703B600042F299 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +417,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2792893C1B703B600042F299 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279289481B703B600042F299 /* ExtensionDelegate.swift in Sources */,
+				279289461B703B600042F299 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -276,6 +433,16 @@
 			isa = PBXTargetDependency;
 			target = 2706EB381B6FA8AD009348A8 /* FoodUp */;
 			targetProxy = 2706EB5F1B6FB2B1009348A8 /* PBXContainerItemProxy */;
+		};
+		279289431B703B600042F299 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2792893F1B703B600042F299 /* FoodUpWatch Extension */;
+			targetProxy = 279289421B703B600042F299 /* PBXContainerItemProxy */;
+		};
+		2792894D1B703B600042F299 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 279289331B703B5F0042F299 /* FoodUpWatch */;
+			targetProxy = 2792894C1B703B600042F299 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -294,6 +461,14 @@
 				2706EB461B6FA8AD009348A8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		279289361B703B600042F299 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				279289371B703B600042F299 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,6 +601,66 @@
 			};
 			name = Release;
 		};
+		279289501B703B600042F299 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FoodUpWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.sundeepgupta.FoodUp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		279289511B703B600042F299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FoodUpWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.sundeepgupta.FoodUp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		279289541B703B600042F299 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = FoodUpWatch_Extension;
+				INFOPLIST_FILE = FoodUpWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.sundeepgupta.FoodUp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		279289551B703B600042F299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = FoodUpWatch_Extension;
+				INFOPLIST_FILE = FoodUpWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.sundeepgupta.FoodUp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -455,6 +690,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2792894F1B703B600042F299 /* Build configuration list for PBXNativeTarget "FoodUpWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279289501B703B600042F299 /* Debug */,
+				279289511B703B600042F299 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		279289531B703B600042F299 /* Build configuration list for PBXNativeTarget "FoodUpWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279289541B703B600042F299 /* Debug */,
+				279289551B703B600042F299 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
