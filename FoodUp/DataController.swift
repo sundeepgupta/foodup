@@ -23,16 +23,13 @@ struct DataController {
         let data = self.archivedMeals()
         guard data.count > 0 else { return [] }
         
-
-        let mapper: (NSData) -> (Meal) = { datum in
+        return data.map { datum in
             if let unarchivedMeal = NSKeyedUnarchiver.unarchiveObjectWithData(datum) {
                 return unarchivedMeal as! Meal
             } else {
                 fatalError("Could not unarchive meal data.")
             }
         }
-        
-        return data.map(mapper)
     }
     
     private func archivedMeals() -> [NSData] {
