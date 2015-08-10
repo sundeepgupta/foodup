@@ -2,16 +2,18 @@ import XCTest
 @testable import FoodUp
 
 class DataControllerTests: XCTestCase {
-    
     var subject: DataController!
+    var type: MealType!
+    var time: NSDate!
+    
     override func setUp() {
         super.setUp()
         subject = DataController(defaults: FakeDefaults())
+        type = MealType.Small
+        time = NSDate()
     }
     
     func testCreateMeal() {
-        let type = MealType.Small
-        let time = NSDate()
         let expected = Meal(type: type, time: time, id: 1)
         let existingMeals = subject.meals()
         
@@ -24,8 +26,6 @@ class DataControllerTests: XCTestCase {
     }
     
     func testFirstMealId() {
-        let type = MealType.Small
-        let time = NSDate()
         let existingMeals = subject.meals()
         XCTAssertEqual(existingMeals.count, 0)
         
@@ -36,9 +36,7 @@ class DataControllerTests: XCTestCase {
     }
     
     func testIncrementingMealIds() {
-        let type0 = MealType.Small
-        let time0 = NSDate()
-        let meal0 = Meal(type: type0, time: time0, id: 1)
+        let meal0 = Meal(type: type, time: time, id: 1)
         
         let type1 = MealType.Medium
         let time1 = NSDate()
@@ -46,10 +44,28 @@ class DataControllerTests: XCTestCase {
         
         let expected = [meal0, meal1]
         
-        subject.createMeal(type: type0, time: time0)
+        subject.createMeal(type: type, time: time)
         subject.createMeal(type: type1, time: time1)
         let result = subject.meals()
         
         XCTAssertEqual(result, expected)
     }
+    
+    func testDeletingMealsWhenItExists() {
+        let meal = subject.createMeal(type: type, time: time)
+
+        let result = subject.destroyMeal(meal)
+        
+        let meals = subject.meals()
+        
+        XCTAssertFalse(meals.contains(meal))
+        XCTAssertTrue(result)
+    }
+    
+    func testDeletingMealsWhenItDoesNotExist() {
+        let meal = Meal(type: type, time: time, id: 99)
+        let result = subject.destroyMeal(meal)
+        XCTAssertFalse(result)
+    }
+
 }

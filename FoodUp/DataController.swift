@@ -21,17 +21,32 @@ struct DataController {
         return meal
     }
     
-    func meals() -> [Meal] {
-        let data = self.archivedMeals()
-        guard data.count > 0 else { return [] }
+    func destroyMeal(meal: Meal) -> Bool {
+        var mealData = self.archivedMeals()
+        let meals = self.mealsFromData(mealData)
+
+        guard let index = meals.indexOf(meal) else {
+            return false
+        }
         
+        mealData.removeAtIndex(index)
+        self.saveMealData(mealData)
+        
+        return true
+    }
+    
+    func meals() -> [Meal] {
+        return self.mealsFromData(self.archivedMeals())
+    }
+    
+    
+    // MARK: - Private
+    private func mealsFromData(data: [NSData]) -> [Meal] {
         return data.map { datum in
             return self.mealFromDatum(datum)
         }
     }
     
-    
-    // MARK: - Private
     private func saveMealData(data: [NSData]) {
         self.defaults.setObject(data, forKey: self.key)
         self.defaults.synchronize()
@@ -62,5 +77,4 @@ struct DataController {
         
         return id
     }
-    
 }
