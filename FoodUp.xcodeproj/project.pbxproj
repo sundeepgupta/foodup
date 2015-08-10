@@ -29,6 +29,7 @@
 		279289481B703B600042F299 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289471B703B600042F299 /* ExtensionDelegate.swift */; };
 		2792894A1B703B600042F299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279289491B703B600042F299 /* Assets.xcassets */; };
 		2792894E1B703B600042F299 /* FoodUpWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 279289341B703B600042F299 /* FoodUpWatch.app */; };
+		27C1C7001B78407400D77294 /* FoodUpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1C6FF1B78407400D77294 /* FoodUpError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		279289471B703B600042F299 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		279289491B703B600042F299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2792894B1B703B600042F299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27C1C6FF1B78407400D77294 /* FoodUpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodUpError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				279289301B70273A0042F299 /* Meal */,
 				279289311B7027700042F299 /* Resources */,
 				2706EB3E1B6FA8AD009348A8 /* TrackVC.swift */,
+				27C1C6FF1B78407400D77294 /* FoodUpError.swift */,
 			);
 			path = FoodUp;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			files = (
 				2706EB511B6FB173009348A8 /* Meal.swift in Sources */,
 				2706EB551B6FB26E009348A8 /* DataController.swift in Sources */,
+				27C1C7001B78407400D77294 /* FoodUpError.swift in Sources */,
 				2792892C1B7021130042F299 /* History.swift in Sources */,
 				2792892A1B701DA40042F299 /* HistoryBuilder.swift in Sources */,
 				2706EB3F1B6FA8AD009348A8 /* TrackVC.swift in Sources */,
@@ -698,6 +702,7 @@
 				279289511B703B600042F299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		279289531B703B600042F299 /* Build configuration list for PBXNativeTarget "FoodUpWatch" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +711,7 @@
 				279289551B703B600042F299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

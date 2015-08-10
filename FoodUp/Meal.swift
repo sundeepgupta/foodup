@@ -35,6 +35,6 @@ class Meal: NSObject, NSCoding {
             return false
         }
         
-        return self.type == rhs.type && self.time == rhs.time
+        return self.id == rhs.id && self.type == rhs.type && self.time == rhs.time
     }
 }
