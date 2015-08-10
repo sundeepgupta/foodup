@@ -32,6 +32,8 @@ struct DataController {
         }
     }
     
+    
+    // MARK: - Private
     private func archivedMeals() -> [NSData] {
         guard let object = self.defaults.arrayForKey(self.key) else { return [] }
         

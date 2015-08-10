@@ -5,7 +5,11 @@ import WatchConnectivity
 class TrackVC: UIViewController, WCSessionDelegate {
     private var dataController: DataController!
     private let session = WCSession.defaultSession()
-
+    @IBOutlet private weak var smallCountLabel: UILabel!
+    @IBOutlet private weak var mediumCountLabel: UILabel!
+    @IBOutlet private weak var largeCountLabel: UILabel!
+    @IBOutlet private weak var totalCountLabel: UILabel!
+    
     
     func setDataController(dataController: DataController) {
         self.dataController = dataController;
