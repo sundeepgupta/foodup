@@ -18,8 +18,8 @@ class TrackVC: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.session.delegate = self
-        self.session.activateSession()
+        self.setupSession()
+        UIApplication.sharedApplication().applicationSupportsShakeToEdit = true
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -28,6 +28,26 @@ class TrackVC: UIViewController, WCSessionDelegate {
             let history = HistoryBuilder(dataController: self.dataController).history()
             historyVC.setHistory(history)
         }
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        guard motion == .MotionShake else { return }
+        
+        let delete = UIAlertAction(title: "Delete", style: .Destructive) { action -> Void in
+            self.dataController.destroyLastMeal()
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
+        let alert = UIAlertController(title: "Delete last meal?", message: nil, preferredStyle: .Alert)
+        alert.addAction(cancel)
+        alert.addAction(delete)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
@@ -63,6 +83,11 @@ class TrackVC: UIViewController, WCSessionDelegate {
     
     
     // MARK: - Private
+    private func setupSession() {
+        self.session.delegate = self
+        self.session.activateSession()
+    }
+    
     private func createMeal(type type: MealType) {
         self.dataController.createMeal(type: type, time: NSDate())
     }

@@ -21,6 +21,15 @@ struct DataController {
         return meal
     }
     
+    func destroyLastMeal() -> Meal? {
+        var mealData = self.archivedMeals()
+        guard mealData.count > 0 else { return nil }
+        
+        let datum = mealData.removeLast()
+        self.saveMealData(mealData)
+        return self.mealFromDatum(datum)
+    }
+    
     func destroyMeal(meal: Meal) -> Bool {
         var mealData = self.archivedMeals()
         let meals = self.mealsFromData(mealData)

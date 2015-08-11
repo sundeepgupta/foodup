@@ -67,5 +67,21 @@ class DataControllerTests: XCTestCase {
         let result = subject.destroyMeal(meal)
         XCTAssertFalse(result)
     }
+    
+    func testDeletingLastMealWhenExists() {
+        let meal = subject.createMeal(type: type, time: time)
+        
+        let result = subject.destroyLastMeal()
+        
+        let meals = subject.meals()
+        
+        XCTAssertFalse(meals.contains(meal))
+        XCTAssertEqual(meal, result!)
+    }
+    
+    func testDeletingLastMealWhenThereAreNoMeals() {
+        let result = subject.destroyLastMeal()
 
+        XCTAssertNil(result)
+    }
 }
