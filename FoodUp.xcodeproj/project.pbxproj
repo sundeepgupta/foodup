@@ -17,6 +17,8 @@
 		2706EB531B6FB1B5009348A8 /* MealType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB521B6FB1B5009348A8 /* MealType.swift */; };
 		2706EB551B6FB26E009348A8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB541B6FB26E009348A8 /* DataController.swift */; };
 		2706EB5D1B6FB2B1009348A8 /* DataControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706EB5C1B6FB2B1009348A8 /* DataControllerTests.swift */; };
+		272AD4591B7AA7570011313A /* TodayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272AD4581B7AA7570011313A /* TodayModel.swift */; };
+		272AD45C1B7AAA290011313A /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272AD45B1B7AAA290011313A /* TodayController.swift */; };
 		279289261B6FC8FD0042F299 /* MealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289251B6FC8FD0042F299 /* MealTests.swift */; };
 		279289281B6FF53A0042F299 /* FakeDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289271B6FF53A0042F299 /* FakeDefaults.swift */; };
 		2792892A1B701DA40042F299 /* HistoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279289291B701DA40042F299 /* HistoryBuilder.swift */; };
@@ -96,6 +98,8 @@
 		2706EB5A1B6FB2B1009348A8 /* FoodUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706EB5C1B6FB2B1009348A8 /* DataControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllerTests.swift; sourceTree = "<group>"; };
 		2706EB5E1B6FB2B1009348A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		272AD4581B7AA7570011313A /* TodayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayModel.swift; sourceTree = "<group>"; };
+		272AD45B1B7AAA290011313A /* TodayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
 		279289251B6FC8FD0042F299 /* MealTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTests.swift; sourceTree = "<group>"; };
 		279289271B6FF53A0042F299 /* FakeDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDefaults.swift; sourceTree = "<group>"; };
 		279289291B701DA40042F299 /* HistoryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryBuilder.swift; sourceTree = "<group>"; };
@@ -170,7 +174,7 @@
 				2706EB401B6FA8AD009348A8 /* Main.storyboard */,
 				279289301B70273A0042F299 /* Meal */,
 				279289311B7027700042F299 /* Resources */,
-				2706EB3E1B6FA8AD009348A8 /* TrackVC.swift */,
+				272AD45A1B7AA9DD0011313A /* Today */,
 				27C1C6FF1B78407400D77294 /* FoodUpError.swift */,
 			);
 			path = FoodUp;
@@ -186,6 +190,16 @@
 				2792892D1B7023420042F299 /* HistoryBuilderTests.swift */,
 			);
 			path = FoodUpTests;
+			sourceTree = "<group>";
+		};
+		272AD45A1B7AA9DD0011313A /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				2706EB3E1B6FA8AD009348A8 /* TrackVC.swift */,
+				272AD4581B7AA7570011313A /* TodayModel.swift */,
+				272AD45B1B7AAA290011313A /* TodayController.swift */,
+			);
+			name = Today;
 			sourceTree = "<group>";
 		};
 		2792892F1B70272E0042F299 /* History */ = {
@@ -401,7 +415,9 @@
 				2706EB511B6FB173009348A8 /* Meal.swift in Sources */,
 				2706EB551B6FB26E009348A8 /* DataController.swift in Sources */,
 				27C1C7001B78407400D77294 /* FoodUpError.swift in Sources */,
+				272AD4591B7AA7570011313A /* TodayModel.swift in Sources */,
 				2792892C1B7021130042F299 /* History.swift in Sources */,
+				272AD45C1B7AAA290011313A /* TodayController.swift in Sources */,
 				2792892A1B701DA40042F299 /* HistoryBuilder.swift in Sources */,
 				2706EB3F1B6FA8AD009348A8 /* TrackVC.swift in Sources */,
 				2706EB4F1B6FAE1B009348A8 /* HistoryVC.swift in Sources */,

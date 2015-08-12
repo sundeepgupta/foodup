@@ -2,13 +2,21 @@ import UIKit
 import WatchConnectivity
 
 
-class TrackVC: UIViewController, WCSessionDelegate {
+class TrackVC: UIViewController, WCSessionDelegate, TodayControllerDelegate {
     private var dataController: DataController!
     private let session = WCSession.defaultSession()
     @IBOutlet private weak var smallCountLabel: UILabel!
     @IBOutlet private weak var mediumCountLabel: UILabel!
     @IBOutlet private weak var largeCountLabel: UILabel!
     @IBOutlet private weak var totalCountLabel: UILabel!
+    var todayController: TodayController!
+    
+    
+    func updateWithModel(model: TodayModel) {
+        self.smallCountLabel.text = "\(model.smallCount)"
+        self.mediumCountLabel.text = "\(model.mediumCount)"
+        self.largeCountLabel.text = "\(model.largeCount)"
+    }
     
     
     func setDataController(dataController: DataController) {
@@ -20,6 +28,8 @@ class TrackVC: UIViewController, WCSessionDelegate {
         
         self.session.delegate = self
         self.session.activateSession()
+        
+        self.todayController = TodayController(delegate: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

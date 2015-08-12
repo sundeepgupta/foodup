@@ -17,6 +17,8 @@ struct DataController {
         mealData.append(datum)
         
         self.saveMealData(mealData)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("dataDidUpdate", object: nil)
 
         return meal
     }
